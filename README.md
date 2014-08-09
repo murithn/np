@@ -16,12 +16,13 @@
 7. deploy to heroku: `git push heroku master`
 8. test heroku app: `heroku ps`
 9. Add CNAME [np.n8mur.yxz](np.n8mur.yxz) to point to [http://immense-basin-4404.herokuapp.com/](http://immense-basin-4404.herokuapp.com/)
-10. download twitter [bootstrap](http://getbootstrap.com) and add css/js/images to public foder
-11. import libraries and scripts in `index.scala.html` and `main.scala.html`
-12. Configure routes
-13. Add assets
-14. Add DB dependcies to `build.sbt` and `application.conf`
-15. Add `Procfile` for Heroku DB deploy
-16. Add FullScreen JS: `public/javascript/fullscreen.js`
-17. Add tests and run tests
-18. Go Crazy!!!
+10. Add custom domain to heroku: `heroku domains:add np.n8mur.xyz`
+11. download twitter [bootstrap](http://getbootstrap.com) and add css/js/images to public foder
+12. import libraries and scripts in `index.scala.html` and `main.scala.html`
+13. Configure routes
+14. Add assets
+15. Add DB dependcies to `build.sbt` and `application.conf`
+16. Add `Procfile` for Heroku DB deploy
+17. Add FullScreen JS: `public/javascript/fullscreen.js`
+18. Add tests and run tests
+19. Go Crazy!!!
