@@ -19,9 +19,9 @@
 10. download twitter [bootstrap](http://getbootstrap.com) and add css/js/images to public foder
 11. import libraries and scripts in `index.scala.html` and `main.scala.html`
 12. Configure routes
-1x. Add assets
-13. Add DB dependcies to `build.sbt` and `application.conf`
-14. Add `Procfile` for Heroku DB deploy
-15. Add FullScreen JS: `public/javascript/fullscreen.js`
-16. Add tests and run tests
-17. Go Crazy!!!
+13. Add assets
+14. Add DB dependcies to `build.sbt` and `application.conf`
+15. Add `Procfile` for Heroku DB deploy
+16. Add FullScreen JS: `public/javascript/fullscreen.js`
+17. Add tests and run tests
+18. Go Crazy!!!
