@@ -1,0 +1,32 @@
+@(slides: List[Slide], slideForm: Form[String])
+
+@import helper._
+
+@main("Slides") {
+
+    <h1>@slides.size slide(s)</h1>
+
+    <ul>
+        @slides.map { slide =>
+            <li>
+                @slide.markdown
+
+                @form(routes.Application.deleteSlide(slide.id)) {
+                    <input type="submit" value="Delete">
+                }
+            </li>
+        }
+    </ul>
+
+    <h2>Add a new slide</h2>
+
+    @form(routes.Application.newSlide) {
+
+        @inputText(slideForm("markdown"))
+        <!-- @inputText(slideForm("label2")) -->
+
+        <input type="submit" value="Create">
+
+    }
+
+}
