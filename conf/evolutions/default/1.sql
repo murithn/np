@@ -5,7 +5,7 @@
 CREATE SEQUENCE slide_id_seq;
 CREATE TABLE slide (
     id integer NOT NULL DEFAULT nextval('slide_id_seq'),
-    markdown varchar(255),
+    markdown text,
     position integer
 );
 

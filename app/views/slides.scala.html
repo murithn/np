@@ -2,31 +2,111 @@
 
 @import helper._
 
-@main("Slides") {
+<!DOCTYPE html>
 
-    <h1>@slides.size slide(s)</h1>
+<html lang="en">
+    <head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <ul>
-        @slides.map { slide =>
-            <li>
-                @slide.markdown
+    	<meta name="description" content="Scala, Play, ToDo">
+	    <meta name="author" content="Nathan Murith">
 
-                @form(routes.Application.deleteSlide(slide.id)) {
-                    <input type="submit" value="Delete">
-                }
-            </li>
-        }
-    </ul>
 
-    <h2>Add a new slide</h2>
 
-    @form(routes.Application.newSlide) {
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/cover.css")">
+        <link rel="shortcut icon" type="image/ico" href="@routes.Assets.at("images/favicon.ico")">
+        <link rel="icon" type="image/ico" href="@routes.Assets.at("images/favicon.ico")">
 
-        @inputText(slideForm("markdown"))
-        <!-- @inputText(slideForm("label2")) -->
+	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+    </head>
+    <body>
 
-        <input type="submit" value="Create">
+	    <div id="slides" class="site-wrapper-slides">
 
-    }
+	      <div class="site-wrapper-inner">
 
-}
+	        <div class="cover-container">
+
+	          <div class="masthead clearfix">
+	            <div class="inner">
+	              <h3 class="masthead-brand">NP Show</h3>
+	              <ul class="nav masthead-nav">
+	                <li class="active"><a href="/">Home</a></li>
+	                <li><a href="http://www.linkedin.com/in/nathanmurith/" target="_blank">Contact</a></li>
+	              </ul>
+	            </div>
+	          </div>
+
+	          <div>
+
+		        <h1>@slides.size slide(s)</h1>
+
+		<!-- 		<textarea id="text-input" oninput="this.editor.update()"
+           rows="6" cols="60">Type **Markdown** here.</textarea> -->
+			    <!-- <div id="preview">
+			    </div> -->
+
+			    <!-- <script>
+			    //   function Editor(input, preview) {
+			    //     this.update = function () {
+			    //       preview.innerHTML = markdown.toHTML(input.value);
+			    //     };
+			    //     input.editor = this;
+			    //     this.update();
+			    //   }
+			    //   var $ = function (id) { return document.getElementById(id); };
+			    //   new Editor($("text-input"), $("preview"));
+			    //  </script> -->
+
+
+
+			    <div>
+
+			    <ul>
+			        @slides.map { slide =>
+			            <li>
+			               	<!-- <script>
+			            	// 	document.write(slide.markdown);
+			            	// </script> -->
+			                <!-- @form(routes.Application.deleteSlide(slide.id)) {
+			                    <input type="submit" value="Delete">
+			                } -->
+			            </li>
+			        }
+			    </ul>
+				</div>
+
+			    <h2>*****Add a new slide</h2>
+
+			    @form(routes.Application.newSlide) {
+
+			        @inputText(slideForm("markdown"))
+
+			        <input type="submit" value="Create">
+
+			    }
+
+			</div>
+
+	        </div>
+
+	      </div>
+
+	    </div>
+
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="@routes.Assets.at("javascripts/fullscreen.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/jquery-1.11.1.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/markdown.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/bootstrap.js")" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    </body>
+</html>

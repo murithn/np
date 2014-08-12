@@ -9,7 +9,7 @@ import models.Slide
 object Application extends Controller {
 
   def index = Action {
-    Ok(views.html.index("Your new application is ready."))
+    Ok(views.html.index(""))
   }
 
   def slides = Action {
@@ -29,6 +29,10 @@ object Application extends Controller {
   def deleteSlide(id: Long) = Action {
 	  Slide.delete(id)
 	  Redirect(routes.Application.slides)
+  }
+
+  def static = Action {
+    Ok(views.html.static("Static Slides"))
   }
 
   val slideForm = Form(

@@ -1,0 +1,36 @@
+/* Slider App Styles */
+.slide-section { padding: 2em 1% 1% 1%; display: none; }
+
+/*header h1 { float: left; line-height: 32px;}*/
+.slide-selected { display: block; }
+.action, .action-on  {
+	display: none;
+  	padding-right: 5px;
+  	padding-left: 5px;
+}
+
+/* Slider Nav */
+nav { float: right; }
+nav li { float: left; line-height: 32px; font-size: 14px;}
+nav button { float: left; border: 0;  text-indent: -9999px; display: block; cursor: pointer; margin:0; }
+
+/* General Slide Styles */
+.slide { font-size: 1.8em; }
+.slide h1 { font-size: 2em;}
+.slide h2 { line-height: 1.5em; }
+.slide p { margin: 0 0 1em; }
+.slide li { list-style-type: disc; margin-left: 40px; }
+.slide pre { font-family: monospace; }
+.slide hgroup { margin: 0 0 20px; }
+
+/* Center graphics and media content */
+.slide video, .slide canvas, .slide figure, .slide object, .slide embed { margin:0 auto; }
+.slide .fullscreen { position: absolute; left:0; top:0; width:100%; z-index:1; }
+
+@media screen and (max-device-width: 480px) {
+	.slide { font-size: 100%; }
+}
+
+.slide-header1 {
+	color: #ee5b21;
+}
