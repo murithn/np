@@ -10,7 +10,7 @@ GET		/slides 					controllers.Application.slides
 POST	/slides 					controllers.Application.newSlide
 POST	/slides/:id/delete			controllers.Application.deleteSlide(id: Long)
 
-# Static
+#  Static
 GET		/static 					controllers.Application.static
 
 # Map static resources from the /public folder to the /assets URL path
