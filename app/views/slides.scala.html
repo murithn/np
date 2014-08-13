@@ -47,48 +47,36 @@
 
 	          <div>
 
-		        <h1>@slides.size slide(s)</h1>
-
-		<!-- 		<textarea id="text-input" oninput="this.editor.update()"
-           rows="6" cols="60">Type **Markdown** here.</textarea> -->
-			    <!-- <div id="preview">
-			    </div> -->
-
-			    <!-- <script>
-			    //   function Editor(input, preview) {
-			    //     this.update = function () {
-			    //       preview.innerHTML = markdown.toHTML(input.value);
-			    //     };
-			    //     input.editor = this;
-			    //     this.update();
-			    //   }
-			    //   var $ = function (id) { return document.getElementById(id); };
-			    //   new Editor($("text-input"), $("preview"));
-			    //  </script> -->
-
-
+		        <h1 class="slide-header1">@slides.size slide(s)</h1>
 
 			    <div>
 
 			    <ul>
 			        @slides.map { slide =>
 			            <li>
-			               	<!-- <script>
-			            	// 	document.write(slide.markdown);
-			            	// </script> -->
-			                <!-- @form(routes.Application.deleteSlide(slide.id)) {
-			                    <input type="submit" value="Delete">
-			                } -->
+
+			            	@slide.markdown
+
+			                @form(routes.Application.deleteSlide(slide.id)) {
+			                    <input class="inner-button" type="submit" value="Delete">
+			                }
 			            </li>
 			        }
 			    </ul>
 				</div>
 
-			    <h2>*****Add a new slide</h2>
+			    <h2 class="slide-header1">*****Add a new slide</h2>
 
 			    @form(routes.Application.newSlide) {
 
-			        @inputText(slideForm("markdown"))
+			        <!-- @inputText(slideForm("markdown")) -->
+
+			        @textarea(
+			        	slideForm("markdown"),
+			       	    'placeholder -> "Slides",
+    					'rows -> 10,
+    					'cols -> 120
+			        )
 
 			        <input type="submit" value="Create">
 
@@ -105,7 +93,7 @@
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="@routes.Assets.at("javascripts/fullscreen.js")" type="text/javascript"></script>
         <script src="@routes.Assets.at("javascripts/jquery-1.11.1.min.js")" type="text/javascript"></script>
-        <script src="@routes.Assets.at("javascripts/markdown.js")" type="text/javascript"></script>
+        <!--<script src="@routes.Assets.at("javascripts/markdown.js")" type="text/javascript"></script>-->
         <script src="@routes.Assets.at("javascripts/bootstrap.js")" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     </body>

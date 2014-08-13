@@ -34,3 +34,11 @@ nav button { float: left; border: 0;  text-indent: -9999px; display: block; curs
 .slide-header1 {
 	color: #ee5b21;
 }
+
+.inner-button {
+	color: #ee5b21;
+}
+
+.input:focus {
+    color: #ee5b21;
+}
