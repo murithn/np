@@ -15,7 +15,7 @@
 6. create heroku app: `heroku create` [Result](http://immense-basin-4404.herokuapp.com/)
 7. deploy to heroku: `git push heroku master`
 8. test heroku app: `heroku ps`
-9. Add CNAME [http://np.n8mur.yxz](np.n8mur.yxz) to point to [http://immense-basin-4404.herokuapp.com/](http://immense-basin-4404.herokuapp.com/)
+9. Add CNAME [http://np.n8mur.yxz](http://np.n8mur.yxz) to point to [http://immense-basin-4404.herokuapp.com/](http://immense-basin-4404.herokuapp.com/)
 10. Add custom domain to heroku: `heroku domains:add np.n8mur.xyz`
 11. download twitter [bootstrap](http://getbootstrap.com) and add css/js/images to public foder
 12. import libraries and scripts in `index.scala.html` and `main.scala.html`
