@@ -1,4 +1,12 @@
-# Getting Started from scratch
+Management Presentation
+=======================
+
+-------------
+## [See it live](http://np.n8mur.xyz)
+
+-------------
+## Getting Started from scratch
+
 
 1. Create Aviator app: `aviator new np play-scala`
 2. Create Github.com repository: np
@@ -25,4 +33,4 @@
 16. Add `Procfile` for Heroku DB deploy
 17. Add FullScreen JS: `public/javascript/fullscreen.js`
 18. Add tests and run tests
-19. Go Crazy!!!
+19. Code away!!!
